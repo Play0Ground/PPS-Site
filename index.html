@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Print Solutions: Printing, Shoe Cleaning & Content Writting (AI) Services</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Animate.css CDN for animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <!-- GSAP for more animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #007aff;
+            --secondary-color: #5ac8fa;
+            --background-color: #f2f2f7;
+            --text-color: #1c1c1e;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 40px;
+        }
+
+    .join-whatsapp-btn {
+    background-color: rgb(81, 202, 156);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.join-whatsapp-btn:hover {
+    background-color: rgba(110, 165, 127, 0.596) ;
+}
+
+.contact-bar {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-bar a {
+            color: white;
+            margin: 0 10px;
+        }
+
+        .service {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-color);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .feature i {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .before-after img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .before-after img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <h1 class="animate__animated animate__fadeInDown">Pro Print Solutions</h1>
+        <p>Your One-Stop Shop for Printing, Shoe Cleaning & Content Writting (AI) Services</p>
+        <div class="contact-bar">
+            <a href="tel:+27726171976"><i class="fas fa-phone"></i> 072 617 1976</a>
+            <a href="mailto:playgroundtest0@gmail.com"><i class="fas fa-envelope"></i> playgroundtest0@gmail.com</a>
+        </div>
+
+        <div><!-- This is the button version for joining the WhatsApp group -->
+            <button class="join-whatsapp-btn" onclick="joinWhatsAppGroup()">
+                <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+            </button></div>
+    </header>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service printing">
+                    <h2>Printing Services</h2>
+                    <img src="https://pdbimg.choice.com.au/hp-officejet-pro-6970_3.jpg" alt="Printing Services">
+                    <p>High-quality printing for all your needs</p>
+                    <p class="price">Black & White: R2.50 per page</p>
+                    <p class="price">Color: R5.00 per page</p>
+                    <select id="printingService">
+                        <option value="">Select a service</option>
+                        <option value="Black & White Printing">Black & White Printing</option>
+                        <option value="Color Printing">Color Printing</option>
+                        <option value="Copying">Copying</option>
+                        <option value="Scanning">Scanning</option>
+                    </select>
+                    <a href="#" class="cta-button" onclick="sendWhatsApp('printing')">Contact via WhatsApp</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service shoe-cleaning">
+                    <h2>Shoe Cleaning</h2>
+                    <img src="https://shoezero.com/cdn/shop/articles/a_comparison_image_of_a_pair_of_dirty_shoes_and_a_pair_of_clean_white_shoes.webp?v=1691672164&width=2048" alt="Shoe Cleaning">
+                    <p>Revitalize your footwear with our expert cleaning</p>
+                    <p class="price">Mixed Color Shoes: R35 per pair</p>
+                    <p class="price">White Shoes: R40 per pair</p>
+                    <select id="shoeService">
+                        <option value="">Select a service</option>
+                        <option value="colored">Color Shoe Cleaning</option>
+                        <option value="white">White Shoe Cleaning</option>
+                    </select>
+                    <a href="#" class="cta-button" onclick="sendWhatsApp('shoe')">Contact via WhatsApp</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service ai-services">
+                    <h2>Content Writting (AI) Services</h2>
+                    <img src="https://www.scribbr.com/wp-content/uploads/2021/12/plagiarism-checker-sidebar.png" alt="Content Writting (AI) Services">
+                    <p>Enhance your academic performance with our AI tools</p>
+                    <select id="aiService">
+                        <option value="">Select a service</option>
+                        <option value="Plagiarism Check">Plagiarism Check</option>
+                        <option value="Notes Creation">Notes Creation</option>
+                    </select>
+                    <a href="#" class="cta-button" onclick="sendWhatsApp('ai')">Contact via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="features">
+            <div class="feature">
+                <i class="fas fa-print"></i>
+                <h3>Print</h3>
+            </div>
+            <div class="feature">
+                <i class="fas fa-copy"></i>
+                <h3>Copy</h3>
+            </div>
+            <div class="feature">
+                <i class="fas fa-scanner"></i>
+                <h3>Scan</h3>
+            </div>
+            <div class="feature">
+                <i class="fas fa-robot"></i>
+                <h3>AI Plagiarism Check</h3>
+            </div>
+            <div class="feature">
+                <i class="fas fa-sticky-note"></i>
+                <h3>AI Note Creation</h3>
+            </div>
+        </section>
+
+        <section class="before-after text-center">
+            <h2>Before & After Shoe Cleaning</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS1akGB7YyFnI-KeAHjvcHL93ZVitCgaFS_A&s" alt="Dirty Shoes">
+            <img src="https://origin.go.gq.com.au/wp-content/uploads/2019/03/clean-sneakers.jpg" alt="Clean Shoes">
+        </section>
+
+        <section class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Address: Ekhaya Junctions House 001, South Africa</p>
+            <p>Email: <a href="mailto:playgroundtest0@gmail.com">playgroundtest0@gmail.com</a></p>
+            <p>Phone: <a href="tel:+27726171976">072 617 1976</a></p>
+            <p>Shoe Cleaning: <a href="tel:+27684747882">068 474 7882</a></p>
+        </section>
+
+        <section class="contact-info text-center mt-5">
+            <h2>Visit Us</h2>
+            <p>Ekhaya Junctions House 001, South Africa</p>
+        </section>
+
+    </div>
+
+    <script>
+        function sendWhatsApp(service) {
+            let message = "";
+            let phoneNumber = "";
+
+            if (service === 'printing') {
+                const printingService = document.getElementById('printingService').value;
+                if (!printingService) {
+                    alert("Please select a printing service before contacting us.");
+                    return;
+                }
+                message = `Hi, I'm interested in your printing services. Specifically, I need ${printingService}.`;
+                phoneNumber = "27726171976";
+            } else if (service === 'shoe') {
+                const shoeService = document.getElementById('shoeService').value;
+                if (!shoeService) {
+                    alert("Please select a shoe cleaning service before contacting us.");
+                    return;
+                }
+                message = `Hi, I'm interested in your shoe washing expertise for ${shoeService} shoes.`;
+                phoneNumber = "27684747882";
+            } else if (service === 'ai') {
+                const aiService = document.getElementById('aiService').value;
+                if (!aiService) {
+                    alert("Please select an Content Writting (AI) Services before contacting us.");
+                    return;
+                }
+                message = `Hi, I'm interested in your Content Writting (AI) Services. Specifically, I need help with ${aiService}.`;
+                phoneNumber = "27726171976";
+            }
+
+            if (message && phoneNumber) {
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+        }
+
+        function joinWhatsAppGroup() {
+            // Replace 'YOUR_GROUP_INVITE_LINK' with your actual WhatsApp group invite link
+            const groupLink = 'YOUR_GROUP_INVITE_LINK';
+            window.open(groupLink, '_blank');
+        }
+
+        // Animations
+        gsap.from(".service", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.3,
+            ease: "power3.out"
+        });
+
+        gsap.from(".feature", {
+            duration: 0.8,
+            scale: 0.5,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "back.out(1.7)"
+        });
+
+        gsap.from(".before-after img", {
+            duration: 1.2,
+            x: (index) => index % 2 === 0 ? -100 : 100,
+            opacity: 0,
+            ease: "power3.out"
+        });
+    </script>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
